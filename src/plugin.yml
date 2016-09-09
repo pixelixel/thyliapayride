@@ -1,0 +1,15 @@
+name: PayRide
+version: 1.0
+author: Mafrans
+main: me.mafrans.payride.PayRide
+
+commands:
+    payride:
+        description: Does things.
+        usage: /<command> <values...>
+        permission: payride.payride
+
+permissions:
+    payride.payride:
+        description: Allows you to do things.
+        default: op
