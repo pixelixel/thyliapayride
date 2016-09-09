@@ -128,13 +128,7 @@ public class PlayerListener implements Listener
                         }
                         else
                         {
-                            switch(data)
-                            {
-                                case 0:{blk.setData((byte)4);}
-                                case 1:{blk.setData((byte)5);}
-                                case 2:{blk.setData((byte)6);}
-                                case 3:{blk.setData((byte)7);}
-                            }
+                            blk.setData((byte) (data + 4));
                         }
                         BukkitTask task = new CloseGate(PayRide.plugin, blk).runTaskLater(PayRide.plugin, 60);
                         player.setItemInHand(new ItemStack(Material.AIR));
@@ -163,13 +157,7 @@ public class PlayerListener implements Listener
                         }
                         else
                         {
-                            switch(data)
-                            {
-                                case 0:{blk.setData((byte)4);}
-                                case 1:{blk.setData((byte)5);}
-                                case 2:{blk.setData((byte)6);}
-                                case 3:{blk.setData((byte)7);}
-                            }
+                            blk.setData((byte) (data + 4));
                         }
                         int rides = Item_multiwayticket.getRides(player.getItemInHand()) - 1;
                         Item_multiwayticket.setRides(e.getPlayer().getItemInHand(), rides);

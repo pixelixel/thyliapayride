@@ -26,13 +26,7 @@ public class CloseGate extends BukkitRunnable {
         }
         else if(data < 8)
         {
-            switch(data)
-            {
-                case 4:{gate.setData((byte)0);cancel();return;}
-                case 5:{gate.setData((byte)1);cancel();return;}
-                case 6:{gate.setData((byte)1);cancel();return;}
-                case 7:{gate.setData((byte)1);cancel();return;}
-            }
+            gate.setData((byte) (data - 4));
         }
         else
         {
